@@ -532,77 +532,9 @@ liveboard:
       - key: b
         value: "2"
     viz_guid: 9931460c-79e7-48db-aa04-166ac2ebc94b
-  - id: Viz_10
-    answer:
-      name: Total cr_Measure1 by Monthly cr_Created Date
-      tables:
-      - id: multi_date_wk
-        name: multi_date_wk
-        fqn: c5f5d461-d902-43b5-a1ec-c0626f049202
-      search_query: "[cr_Created Date] [cr_Created Date].monthly [cr_Measure1]"
-      answer_columns:
-      - name: Month(cr_Created Date)
-      - name: Total cr_Measure1
-      table:
-        table_columns:
-        - column_id: Month(cr_Created Date)
-          show_headline: false
-        - column_id: Total cr_Measure1
-          show_headline: false
-        ordered_column_ids:
-        - Month(cr_Created Date)
-        - Total cr_Measure1
-        client_state: ""
-      chart:
-        type: LINE
-        chart_columns:
-        - column_id: Month(cr_Created Date)
-        - column_id: Total cr_Measure1
-        axis_configs:
-        - x:
-          - Month(cr_Created Date)
-          "y":
-          - Total cr_Measure1
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: 4af35ac7-aaa4-40a3-88f2-7c7b2b985216
-  - id: Viz_11
-    answer:
-      name: Total st_Measure2 by Monthly st_Started Date
-      tables:
-      - id: multi_date_wk
-        name: multi_date_wk
-        fqn: c5f5d461-d902-43b5-a1ec-c0626f049202
-      search_query: "[st_Measure2] [st_Started Date] [st_Started Date].monthly"
-      answer_columns:
-      - name: Month(st_Started Date)
-      - name: Total st_Measure2
-      table:
-        table_columns:
-        - column_id: Month(st_Started Date)
-          show_headline: false
-        - column_id: Total st_Measure2
-          show_headline: false
-        ordered_column_ids:
-        - Month(st_Started Date)
-        - Total st_Measure2
-        client_state: ""
-      chart:
-        type: LINE
-        chart_columns:
-        - column_id: Month(st_Started Date)
-        - column_id: Total st_Measure2
-        axis_configs:
-        - x:
-          - Month(st_Started Date)
-          "y":
-          - Total st_Measure2
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: 2df8240b-f024-413e-9110-a83a0d276c2e
   filters:
   - column:
-    - case_study_worksheet::Type
+    - Type
     oper: in
     values:
     - food
@@ -656,16 +588,6 @@ liveboard:
       "y": 31
       height: 8
       width: 12
-    - visualization_id: Viz_10
-      x: 0
-      "y": 39
-      height: 8
-      width: 6
-    - visualization_id: Viz_11
-      x: 6
-      "y": 39
-      height: 8
-      width: 6
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
