@@ -1,0 +1,16 @@
+[ {
+  "originalGuid" : "bbe8157a-b876-4bef-9e66-f29413b9f03e",
+  "mappedGuid" : "bb3c9d7d-9c90-4b8a-bbbe-f816574e0b58",
+  "counter" : 0,
+  "additionalMapping" : {
+    "9931460c-79e7-48db-aa04-166ac2ebc94b" : "0b944cb1-7ced-4e48-a9c4-e9dcd61625ef",
+    "7f8c157a-eae7-47a2-9e71-4228411cc1c9" : "77e99f5d-d0e1-4004-b6bd-762022be5678",
+    "63a4046e-1181-4574-9327-1210e9602925" : "83991ca6-99c3-49f0-9b87-869a4af9af91",
+    "54c0f78a-ab3f-4b21-a619-9d4478227c5e" : "910b2de2-f688-44cf-9b49-0fd3ef5b163e",
+    "d60f2ca4-bdd3-4890-aa82-b5e2d1309e87" : "ceb6b7cc-2315-408f-aec8-3fdfae4c7f17",
+    "5a139476-5c59-4d39-b890-98d9bc8576be" : "64340904-a769-4a76-a2e2-658a1d3d692d",
+    "be230c4d-5cdc-40c9-a7b2-ea05948b9539" : "80008927-7d23-48fb-acb1-59667c830469",
+    "5b5cdf4f-95b8-4957-994f-31acfccb47ab" : "b1dbef92-016d-4284-ba08-9aaf2e5ac4fd",
+    "f6302d3b-3600-4ea9-9731-8e7661b79c41" : "5e2b8134-4cdb-4d9f-b4f6-acc644cba517"
+  }
+} ]
