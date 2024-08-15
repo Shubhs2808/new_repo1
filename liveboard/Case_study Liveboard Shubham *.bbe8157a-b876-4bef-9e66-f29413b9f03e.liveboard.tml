@@ -18,7 +18,7 @@ liveboard:
         name: Inventory
         expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
         was_auto_generated: false
-      search_query: "[Product Name] [sales] [Type].non-food"
+      search_query: "[Product Name] [sales] [Product_type].non-food"
       answer_columns:
       - name: Product Name
       - name: Total sales
@@ -158,7 +158,7 @@ liveboard:
         name: inventory
         expr: "[Quantity Purchased] * [Unit Cost Usd] "
         was_auto_generated: false
-      search_query: "[sales] [Is Holiday] = 0 [Product Name] != '{null}' [Type] = 'food'"
+      search_query: "[sales] [Is Holiday] = 0 [Product Name] != '{null}' [Product_type] = 'food'"
       answer_columns:
       - name: Total sales
         format:
@@ -204,8 +204,9 @@ liveboard:
         name: sales
         expr: "[Quantity Sold] * [Unit Retail Price Usd] "
         was_auto_generated: false
-      search_query: "[inventory] [sales] [Type]"
+      search_query: "[inventory] [sales] [Product_type]"
       answer_columns:
+      - name: Product_type
       - name: Total inventory
         format:
           category: CURRENCY
@@ -224,17 +225,16 @@ liveboard:
             decimals: 2.0
             toSeparateThousands: true
           isCategoryEditable: true
-      - name: Type
       table:
         table_columns:
+        - column_id: Product_type
+          show_headline: false
         - column_id: Total inventory
           show_headline: false
         - column_id: Total sales
           show_headline: false
-        - column_id: Type
-          show_headline: false
         ordered_column_ids:
-        - Type
+        - Product_type
         - Total inventory
         - Total sales
         client_state: ""
@@ -242,17 +242,17 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
+        - column_id: Product_type
         - column_id: Total inventory
         - column_id: Total sales
-        - column_id: Type
         axis_configs:
         - x:
-          - Type
+          - Product_type
           "y":
           - Total sales
           - Total inventory
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Total inventory\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1f02789c-a158-405f-b03f-27cf07a63976\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Type\"]}},{\"id\": \"e51dc0f5-d810-4c45-b340-f8b44054def4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total inventory\",\"Total sales\"],\"yAxisRange\": {\"min\": 0.0,\"max\": 600.0},\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"Total inventory\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product_type\",\"columnProperty\": {}},{\"columnId\": \"Total inventory\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1f02789c-a158-405f-b03f-27cf07a63976\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product_type\"]}},{\"id\": \"e51dc0f5-d810-4c45-b340-f8b44054def4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total inventory\",\"Total sales\"],\"yAxisRange\": {\"min\": 0.0,\"max\": 600.0},\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"Total inventory\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 54c0f78a-ab3f-4b21-a619-9d4478227c5e
   - id: Viz_5
@@ -532,9 +532,13 @@ liveboard:
       - key: b
         value: "2"
     viz_guid: 9931460c-79e7-48db-aa04-166ac2ebc94b
+  - id: Viz_10
+    viz_guid: 51d1284e-82ab-40a6-9a76-1dafc6a8c4d6
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Demo liveboard for ver</span></h1><h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">sion control trial</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   filters:
   - column:
-    - Type
+    - Product_type
     oper: in
     values:
     - food
@@ -543,9 +547,19 @@ liveboard:
     display_name: ""
   layout:
     tiles:
+    - visualization_id: Viz_9
+      x: 0
+      "y": 32
+      height: 8
+      width: 12
+    - visualization_id: Viz_8
+      x: 0
+      "y": 24
+      height: 8
+      width: 12
     - visualization_id: Viz_3
       x: 0
-      "y": 7
+      "y": 8
       height: 8
       width: 6
     - visualization_id: Viz_4
@@ -555,17 +569,17 @@ liveboard:
       width: 6
     - visualization_id: Viz_5
       x: 0
-      "y": 15
+      "y": 16
       height: 4
       width: 5
     - visualization_id: Viz_7
       x: 0
-      "y": 19
+      "y": 20
       height: 4
       width: 5
     - visualization_id: Viz_6
       x: 5
-      "y": 15
+      "y": 16
       height: 7
       width: 7
     - visualization_id: Viz_2
@@ -573,21 +587,16 @@ liveboard:
       "y": 0
       height: 7
       width: 6
-    - visualization_id: Viz_1
+    - visualization_id: Viz_10
       x: 0
       "y": 0
+      height: 1
+      width: 6
+    - visualization_id: Viz_1
+      x: 0
+      "y": 1
       height: 7
       width: 6
-    - visualization_id: Viz_8
-      x: 0
-      "y": 23
-      height: 8
-      width: 12
-    - visualization_id: Viz_9
-      x: 0
-      "y": 31
-      height: 8
-      width: 12
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
