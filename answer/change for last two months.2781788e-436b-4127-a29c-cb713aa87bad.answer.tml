@@ -1,0 +1,59 @@
+guid: 2781788e-436b-4127-a29c-cb713aa87bad
+answer:
+  name: change for last two months
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  formulas:
+  - id: change2
+    name: change2
+    expr: "safe_divide ( sum ( [change] ) , sum ( [sales(last month)] ) )"
+    was_auto_generated: false
+  - id: change
+    name: change
+    expr: "( [sales(this month)] - [sales(last month)] ) / [sales(last month)]"
+    was_auto_generated: false
+  search_query: "[sales] [date].'this month' vs [date].'last month' [region] [change] sort by [change] descending [region] in ( top 3 [change] by [region] )"
+  answer_columns:
+  - name: change
+    format:
+      category: PERCENTAGE
+      percentageFormatConfig:
+        decimals: 2.0
+      isCategoryEditable: true
+  - name: region
+  - name: sales(last month)
+  - name: sales(this month)
+  table:
+    table_columns:
+    - column_id: change
+      show_headline: false
+    - column_id: region
+      show_headline: false
+    - column_id: sales(last month)
+      show_headline: false
+    - column_id: sales(this month)
+      show_headline: false
+    ordered_column_ids:
+    - region
+    - sales(this month)
+    - sales(last month)
+    - change
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"region\",\"change\",\"sales(last month)\",\"sales(this month)\"],\"columnProperties\": [{\"columnId\": \"sales(last month)\",\"columnProperty\": {\"isHidden\": false}},{\"columnId\": \"sales(this month)\",\"columnProperty\": {\"isHidden\": false}}]}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: change
+    - column_id: region
+    - column_id: sales(last month)
+    - column_id: sales(this month)
+    axis_configs:
+    - x:
+      - region
+      "y":
+      - change
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"sales(this month)\",\"columnProperty\": {}},{\"columnId\": \"sales(last month)\",\"columnProperty\": {}},{\"columnId\": \"change\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5b1a53b5-05ea-488e-83dc-3eb3448180cc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"change\"],\"isOpposite\": false}},{\"id\": \"81445626-0234-4bd3-bc05-1d1a9376935a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"sales(this month)\",\"color\": \"#06BF7F\"},{\"serieName\": \"6f716736-d6a5-4ac7-b6a2-f8cca3fb9240\",\"color\": \"#FCC838\"},{\"serieName\": \"sales(last month)\",\"color\": \"#48D1E0\"},{\"serieName\": \"change\",\"color\": \"#2E75F0\"}]}"
+  display_mode: TABLE_MODE
