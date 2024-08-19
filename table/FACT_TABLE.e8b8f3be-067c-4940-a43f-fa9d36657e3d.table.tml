@@ -1,0 +1,55 @@
+guid: e8b8f3be-067c-4940-a43f-fa9d36657e3d
+table:
+  name: FACT_TABLE
+  db: DB_CASESTUDY
+  schema: PUBLIC
+  db_table: FACT_TABLE
+  connection:
+    name: Case_study_sa
+    fqn: d119ead1-c43f-457b-a56a-54ca5b2a3a67
+  columns:
+  - name: ID
+    db_column_name: ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DIM1_ID
+    db_column_name: DIM1_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DIM2_ID
+    db_column_name: DIM2_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: VALUE
+    db_column_name: VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: DIM_TABLE_to_FACT_TABLE
+    destination:
+      name: DIM_TABLE
+      fqn: f1889c3b-efc2-4478-b66c-c08c9ba057d1
+    "on": "[FACT_TABLE::DIM1_ID] = [DIM_TABLE::ID]"
+    type: INNER
+  - name: FACT_TABLE_to_DIM_TABLE
+    destination:
+      name: DIM_TABLE
+      fqn: f1889c3b-efc2-4478-b66c-c08c9ba057d1
+    "on": "[FACT_TABLE::DIM2_ID] = [DIM_TABLE::ID]"
+    type: INNER
