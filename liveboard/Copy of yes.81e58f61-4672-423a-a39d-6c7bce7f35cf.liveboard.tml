@@ -80,8 +80,21 @@ liveboard:
     is_single_value: false
     display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      size: LARGE
-    - visualization_id: Viz_2
-      size: MEDIUM
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
+      - visualization_id: Viz_2
+        x: 0
+        "y": 8
+        height: 8
+        width: 6
+      id: f449a7d1-dd58-4530-9a50-7de16e2250cf
+    - name: Tab 2
+      description: ""
+      id: 0c956c81-44c5-428b-bd4f-ccee9338d98b
