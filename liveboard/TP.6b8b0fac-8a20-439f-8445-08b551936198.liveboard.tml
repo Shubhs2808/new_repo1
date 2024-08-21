@@ -358,15 +358,6 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c7ca59ca-2785-4e7c-91c9-4409a154c49d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"dcdaf73e-2b06-44ed-b60b-3382aced6a6e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 52f1de54-ddc2-44eb-965b-cb259e7df401
-  filters:
-  - column:
-    - (Sample) Retail - Apparel::state
-    oper: in
-    values:
-    - delaware
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_9
@@ -386,4 +377,6 @@ liveboard:
     - visualization_id: Viz_7
       size: LARGE
     - visualization_id: Viz_8
+      size: MEDIUM
+    - visualization_id: Viz_10
       size: MEDIUM
