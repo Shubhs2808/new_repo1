@@ -1,0 +1,84 @@
+guid: 9996d5f4-6b71-4d03-8c97-90ee9cb32c2f
+liveboard:
+  name: ABCD
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Quantity Sold, Total Sales by dayofweek"
+      tables:
+      - id: case_study_worksheet
+        name: case_study_worksheet
+        fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
+      search_query: "[Quantity Sold] [Sales] [dayofweek]"
+      answer_columns:
+      - name: Total Quantity Sold
+      - name: Total Sales
+      - name: dayofweek
+      table:
+        table_columns:
+        - column_id: Total Quantity Sold
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        - column_id: dayofweek
+          show_headline: false
+        ordered_column_ids:
+        - dayofweek
+        - Total Quantity Sold
+        - Total Sales
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Quantity Sold
+        - column_id: Total Sales
+        - column_id: dayofweek
+        axis_configs:
+        - x:
+          - dayofweek
+          "y":
+          - Total Quantity Sold
+          - Total Sales
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 7da9c7c1-e588-4547-8fd4-eb357fe81c75
+  - id: Viz_2
+    answer:
+      name: "Total Quantity Sold, Total Sales by dayofweek"
+      tables:
+      - id: case_study_worksheet
+        name: case_study_worksheet
+        fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
+      search_query: "[Sales] [Product_type] [Quantity Sold]"
+      answer_columns:
+      - name: Product_type
+      - name: Total Quantity Sold
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Product_type
+          show_headline: false
+        - column_id: Total Quantity Sold
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Product_type
+        - Total Sales
+        - Total Quantity Sold
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product_type
+        - column_id: Total Quantity Sold
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Product_type
+          "y":
+          - Total Sales
+          - Total Quantity Sold
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 803d58fa-aafd-4808-a67c-63cb5f66cab7

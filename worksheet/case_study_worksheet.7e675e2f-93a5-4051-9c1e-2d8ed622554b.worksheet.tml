@@ -197,8 +197,7 @@ worksheet:
   - name: inventory
     formula_id: inventory
     properties:
-      column_type: MEASURE
-      aggregation: SUM
+      column_type: ATTRIBUTE
       index_type: DONT_INDEX
       synonyms:
       - Stock
@@ -219,13 +218,6 @@ worksheet:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: perc
-    formula_id: perc
-    properties:
-      column_type: MEASURE
-      aggregation: SUM
-      index_type: DONT_INDEX
-      format_pattern: '#.0%'
   properties:
     is_bypass_rls: false
     join_progressive: true
