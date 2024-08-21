@@ -476,17 +476,17 @@ liveboard:
       answer_columns:
       - name: Total Sales
       - name: Total Unit Cost Usd
-      - name: Type
+      - name: product_type
       table:
         table_columns:
         - column_id: Total Sales
           show_headline: false
         - column_id: Total Unit Cost Usd
           show_headline: false
-        - column_id: Type
+        - column_id: product_type
           show_headline: false
         ordered_column_ids:
-        - Type
+        - product_type
         - Total Unit Cost Usd
         - Total Sales
         client_state: ""
@@ -495,10 +495,10 @@ liveboard:
         chart_columns:
         - column_id: Total Sales
         - column_id: Total Unit Cost Usd
-        - column_id: Type
+        - column_id: product_type
         axis_configs:
         - x:
-          - Type
+          - product_type
           "y":
           - Total Unit Cost Usd
           - Total Sales
