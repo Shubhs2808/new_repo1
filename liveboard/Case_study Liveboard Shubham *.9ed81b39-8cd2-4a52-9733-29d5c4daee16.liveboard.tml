@@ -510,57 +510,61 @@ liveboard:
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">ABCD</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 4
-      height: 7
-      width: 6
-    - visualization_id: Viz_9
-      x: 0
-      "y": 43
-      height: 8
-      width: 6
-    - visualization_id: Viz_3
-      x: 0
-      "y": 11
-      height: 8
-      width: 6
-    - visualization_id: Viz_8
-      x: 0
-      "y": 35
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 0
-      "y": 27
-      height: 8
-      width: 12
-    - visualization_id: Viz_5
-      x: 5
-      "y": 19
-      height: 7
-      width: 7
-    - visualization_id: Viz_10
-      x: 0
-      "y": 0
-      height: 4
-      width: 3
-    - visualization_id: Viz_2
-      x: 6
-      "y": 0
-      height: 4
-      width: 6
-    - visualization_id: Viz_6
-      x: 0
-      "y": 23
-      height: 4
-      width: 5
-    - visualization_id: Viz_4
-      x: 0
-      "y": 19
-      height: 4
-      width: 5
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 4
+        height: 7
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 11
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 19
+        height: 4
+        width: 5
+      - visualization_id: Viz_5
+        x: 5
+        "y": 19
+        height: 7
+        width: 7
+      - visualization_id: Viz_6
+        x: 0
+        "y": 23
+        height: 4
+        width: 5
+      - visualization_id: Viz_7
+        x: 0
+        "y": 27
+        height: 8
+        width: 12
+      - visualization_id: Viz_8
+        x: 0
+        "y": 35
+        height: 8
+        width: 12
+      - visualization_id: Viz_9
+        x: 0
+        "y": 43
+        height: 8
+        width: 6
+      - visualization_id: Viz_10
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      id: 7c3bccd7-8729-4848-8e1d-d79e01c72a83
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
