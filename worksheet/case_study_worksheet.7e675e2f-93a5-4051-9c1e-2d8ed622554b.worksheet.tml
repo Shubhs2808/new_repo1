@@ -107,7 +107,7 @@ worksheet:
       - eggs
       - ham
       - curd
-  - name: Product_type
+  - name: Type
     description: types of product food or non food
     column_id: D_PRODUCT_1::PRODUCT_TYPE
     properties:
