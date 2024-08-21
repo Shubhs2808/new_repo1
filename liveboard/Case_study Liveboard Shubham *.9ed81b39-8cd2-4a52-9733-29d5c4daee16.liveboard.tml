@@ -18,7 +18,7 @@ liveboard:
         name: Inventory
         expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
         was_auto_generated: false
-      search_query: "[Product Name] [sales] [Type].non-food"
+      search_query: "[Product Name] [sales] [product_type].non-food"
       answer_columns:
       - name: Product Name
       - name: Total sales
@@ -158,7 +158,7 @@ liveboard:
         name: inventory
         expr: "[Quantity Purchased] * [Unit Cost Usd]"
         was_auto_generated: false
-      search_query: "[sales] [Is Holiday] = 0 [Product Name] != '{null}' [Type] = 'food'"
+      search_query: "[sales] [Is Holiday] = 0 [Product Name] != '{null}' [product_type] = 'food'"
       answer_columns:
       - name: Total sales
         format:
@@ -472,7 +472,7 @@ liveboard:
       - id: case_study_worksheet
         name: case_study_worksheet
         fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
-      search_query: "[Unit Cost Usd] [Sales] [Type]"
+      search_query: "[Unit Cost Usd] [Sales] [product_type]"
       answer_columns:
       - name: Total Sales
       - name: Total Unit Cost Usd
@@ -505,10 +505,6 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: c54d8438-642e-4dfc-89eb-fab526dcb72c
-  - id: Viz_10
-    viz_guid: ca40cef2-143e-459a-a0e1-a0ad9ee08623
-    note_tile:
-      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">ABCD</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -541,11 +537,6 @@ liveboard:
       "y": 17
       height: 7
       width: 7
-    - visualization_id: Viz_10
-      x: 0
-      "y": 0
-      height: 2
-      width: 3
     - visualization_id: Viz_6
       x: 0
       "y": 21
