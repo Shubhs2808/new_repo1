@@ -1,0 +1,33 @@
+guid: 45211c87-d560-4996-ae14-a099bfb2e596
+table:
+  name: D_DATE
+  db: DB_CASESTUDY
+  schema: SA_CASESTUDY
+  db_table: D_DATE
+  connection:
+    name: Case_study_sa
+    fqn: dfddaed7-5afd-4f56-a790-215f99f58488
+  columns:
+  - name: DATE_ID
+    db_column_name: DATE_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DATE
+    db_column_name: DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: IS_HOLIDAY
+    db_column_name: IS_HOLIDAY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
