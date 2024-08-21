@@ -1,0 +1,52 @@
+guid: e5074e81-e5c6-46f7-af76-21a6f0efb961
+table:
+  name: USER_GROUP_MEMBERSHIPS_1
+  db: DB_CASESTUDY
+  schema: PUBLIC
+  db_table: USER_GROUP_MEMBERSHIPS_1
+  connection:
+    name: rlsconn
+    fqn: b61e9c43-2c74-4c04-b8bd-36b7d9f46969
+  columns:
+  - name: USER_ID
+    db_column_name: USER_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: USER_NAME
+    db_column_name: USER_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GROUP_NAME
+    db_column_name: GROUP_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  rls_rules:
+    tables:
+    - name: USER_GROUP_MEMBERSHIPS_1
+      fqn: e5074e81-e5c6-46f7-af76-21a6f0efb961
+    table_paths:
+    - id: USER_GROUP_MEMBERSHIPS_1_1
+      table: USER_GROUP_MEMBERSHIPS_1
+      join_path:
+      - {}
+      column:
+      - GROUP_NAME
+    rules:
+    - name: rls
+      expr: "ts_groups = [USER_GROUP_MEMBERSHIPS_1_1::GROUP_NAME]"
+  joins_with:
+  - name: USER_GROUP_MEMBERSHIPS_1_to_USER_GROUP_MEMBERSHIPS
+    destination:
+      name: USER_GROUP_MEMBERSHIPS
+      fqn: 3a51921d-163a-4829-9e25-a2dbb8c1d035
+    "on": "[USER_GROUP_MEMBERSHIPS_1::GROUP_NAME] = [USER_GROUP_MEMBERSHIPS::GROUP_NAME] AND [USER_GROUP_MEMBERSHIPS_1::USER_NAME] = [USER_GROUP_MEMBERSHIPS::USER_NAME]"
+    type: INNER
+    is_one_to_one: true

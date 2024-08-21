@@ -1,0 +1,76 @@
+guid: a9cb8548-707f-496f-8765-8909f645b374
+liveboard:
+  name: shriya.randhar's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total UNIT_COST_USD by PRODUCT_NAME
+      tables:
+      - id: D_PRODUCT
+        name: D_PRODUCT
+        fqn: 6c4f76c9-8b43-4f06-ad0e-a59f81d03ff5
+      search_query: "[PRODUCT_NAME] [UNIT_COST_USD]"
+      answer_columns:
+      - name: PRODUCT_NAME
+      - name: Total UNIT_COST_USD
+      table:
+        table_columns:
+        - column_id: PRODUCT_NAME
+          show_headline: false
+        - column_id: Total UNIT_COST_USD
+          show_headline: false
+        ordered_column_ids:
+        - PRODUCT_NAME
+        - Total UNIT_COST_USD
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"PRODUCT_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total UNIT_COST_USD\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: PRODUCT_NAME
+        - column_id: Total UNIT_COST_USD
+        axis_configs:
+        - x:
+          - PRODUCT_NAME
+          "y":
+          - Total UNIT_COST_USD
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"PRODUCT_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total UNIT_COST_USD\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8759888e-8b8f-40a8-a374-aec4bf4f1647\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total UNIT_COST_USD\"],\"isOpposite\": false}},{\"id\": \"b27472f1-7c05-4044-83f7-d9c03bb09ced\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"PRODUCT_NAME\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3478e7f9-a883-4702-86cc-b7d374bf377f
+  - id: Viz_2
+    answer:
+      name: "PRODUCT_CATEGORY_NAME_ENGLISH, PRODUCT_CATEGORY_NAME"
+      tables:
+      - id: 1 PRODUCT_CATEGORY_NAME_TRANSLATION
+        name: 1 PRODUCT_CATEGORY_NAME_TRANSLATION
+        fqn: df311578-2085-4691-b12e-534dda5a3ae1
+      search_query: "[PRODUCT_CATEGORY_NAME_ENGLISH] [PRODUCT_CATEGORY_NAME]"
+      answer_columns:
+      - name: PRODUCT_CATEGORY_NAME
+      - name: PRODUCT_CATEGORY_NAME_ENGLISH
+      table:
+        table_columns:
+        - column_id: PRODUCT_CATEGORY_NAME
+          show_headline: false
+        - column_id: PRODUCT_CATEGORY_NAME_ENGLISH
+          show_headline: false
+        ordered_column_ids:
+        - PRODUCT_CATEGORY_NAME_ENGLISH
+        - PRODUCT_CATEGORY_NAME
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"PRODUCT_CATEGORY_NAME_ENGLISH\",\"columnProperty\": {}},{\"columnId\": \"PRODUCT_CATEGORY_NAME\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: PRODUCT_CATEGORY_NAME
+        - column_id: PRODUCT_CATEGORY_NAME_ENGLISH
+        axis_configs:
+        - x:
+          - PRODUCT_CATEGORY_NAME_ENGLISH
+          "y":
+          - PRODUCT_CATEGORY_NAME
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"PRODUCT_CATEGORY_NAME_ENGLISH\",\"columnProperty\": {}},{\"columnId\": \"PRODUCT_CATEGORY_NAME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbb45b5f-de6b-4dda-96f3-0f314bd85b09\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"PRODUCT_CATEGORY_NAME\"],\"isOpposite\": false}},{\"id\": \"d7f66298-7fcd-446d-a022-7faf7bdf3732\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"PRODUCT_CATEGORY_NAME_ENGLISH\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: f467bfa2-340b-4dc4-9f0f-b3fc84bf3f84

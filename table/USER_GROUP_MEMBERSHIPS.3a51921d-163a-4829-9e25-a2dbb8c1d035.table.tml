@@ -1,0 +1,57 @@
+guid: 3a51921d-163a-4829-9e25-a2dbb8c1d035
+table:
+  name: USER_GROUP_MEMBERSHIPS
+  db: DB_CASESTUDY
+  schema: PUBLIC
+  db_table: USER_GROUP_MEMBERSHIPS
+  connection:
+    name: rlsconn
+    fqn: b61e9c43-2c74-4c04-b8bd-36b7d9f46969
+  columns:
+  - name: USER_ID
+    db_column_name: USER_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: USER_NAME
+    db_column_name: USER_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GROUP_NAME
+    db_column_name: GROUP_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EMAIL
+    db_column_name: EMAIL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED_AT
+    db_column_name: CREATED_AT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  rls_rules:
+    tables:
+    - name: USER_GROUP_MEMBERSHIPS
+      fqn: 3a51921d-163a-4829-9e25-a2dbb8c1d035
+    table_paths:
+    - id: USER_GROUP_MEMBERSHIPS_1
+      table: USER_GROUP_MEMBERSHIPS
+      join_path:
+      - {}
+      column:
+      - USER_NAME
+    rules:
+    - name: first rls
+      expr: "ts_username = [USER_GROUP_MEMBERSHIPS_1::USER_NAME]"
