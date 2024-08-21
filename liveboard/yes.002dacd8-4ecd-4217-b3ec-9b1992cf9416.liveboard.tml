@@ -1,0 +1,87 @@
+guid: 002dacd8-4ecd-4217-b3ec-9b1992cf9416
+liveboard:
+  name: "yes"
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Value by d_Dim1
+      tables:
+      - id: new double join
+        name: new double join
+        fqn: 1119eab4-012d-4055-9dd3-6c3ec61a5c14
+      search_query: "[Value] [d_Dim1]"
+      answer_columns:
+      - name: Total Value
+      - name: d_Dim1
+      table:
+        table_columns:
+        - column_id: Total Value
+          show_headline: false
+        - column_id: d_Dim1
+          show_headline: false
+        ordered_column_ids:
+        - d_Dim1
+        - Total Value
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Value
+        - column_id: d_Dim1
+        axis_configs:
+        - x:
+          - d_Dim1
+          "y":
+          - Total Value
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 8ccabfc2-8528-430a-bf29-6792a4a949c0
+  - id: Viz_2
+    answer:
+      name: Total Value by d_Dim1
+      tables:
+      - id: new double join
+        name: new double join
+        fqn: 1119eab4-012d-4055-9dd3-6c3ec61a5c14
+      search_query: "[Value] [d_Dim1]"
+      answer_columns:
+      - name: Total Value
+      - name: d_Dim1
+      table:
+        table_columns:
+        - column_id: Total Value
+          show_headline: false
+        - column_id: d_Dim1
+          show_headline: false
+        ordered_column_ids:
+        - d_Dim1
+        - Total Value
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total Value
+        - column_id: d_Dim1
+        axis_configs:
+        - x:
+          - d_Dim1
+          "y":
+          - Total Value
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: c4950cb7-f721-468e-ab75-3d194e160be6
+  filters:
+  - column:
+    - d_Id
+    oper: '>'
+    values:
+    - "2"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
+    - visualization_id: Viz_2
+      size: MEDIUM
