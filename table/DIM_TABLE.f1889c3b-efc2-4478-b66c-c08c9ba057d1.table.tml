@@ -1,0 +1,30 @@
+guid: f1889c3b-efc2-4478-b66c-c08c9ba057d1
+table:
+  name: DIM_TABLE
+  db: DB_CASESTUDY
+  schema: PUBLIC
+  db_table: DIM_TABLE
+  connection:
+    name: Case_study_sa
+    fqn: d119ead1-c43f-457b-a56a-54ca5b2a3a67
+  columns:
+  - name: ID
+    db_column_name: ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DIM1
+    db_column_name: DIM1
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DIM2
+    db_column_name: DIM2
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
