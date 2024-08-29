@@ -505,15 +505,6 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: c54d8438-642e-4dfc-89eb-fab526dcb72c
-  filters:
-  - column:
-    - Product Name
-    oper: in
-    values:
-    - cheese
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1
