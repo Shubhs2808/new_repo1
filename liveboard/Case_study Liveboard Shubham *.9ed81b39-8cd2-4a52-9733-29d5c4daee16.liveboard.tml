@@ -18,7 +18,7 @@ liveboard:
         name: Inventory
         expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
         was_auto_generated: false
-      search_query: "[Product Name] [sales] [product_type].non-food"
+      search_query: "[Product Name] [sales]"
       answer_columns:
       - name: Product Name
       - name: Total sales
