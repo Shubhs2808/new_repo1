@@ -505,6 +505,62 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: c54d8438-642e-4dfc-89eb-fab526dcb72c
+  - id: Viz_10
+    answer:
+      name: Total sales and Total Inventory by Product
+      tables:
+      - id: case_study_worksheet
+        name: case_study_worksheet
+        fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
+      formulas:
+      - id: sales
+        name: sales
+        expr: "[Quantity Sold] * [Unit Retail Price Usd]"
+        was_auto_generated: false
+      - id: Inventory
+        name: Inventory
+        expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
+        was_auto_generated: false
+      search_query: "[Product Name] [sales] [Is Holiday] = 1"
+      answer_columns:
+      - name: Product Name
+      - name: Total sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Name
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        ordered_column_ids:
+        - Product Name
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Product Name\"]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"938f2f1c-889c-440e-ac6f-c002be5ef37f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"fef59593-d8a8-4c3f-86e0-ccfa737181d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"seriesColors\": [{\"serieName\": \"e648abe9-833a-48fe-a841-29f85c2fca18\",\"color\": \"#48D1E0\"},{\"serieName\": \"39727204-732f-4704-8678-160ba0894a5c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"},{\"serieName\": \"d399e7cb-b484-48eb-a9c2-dfa467b31433\",\"color\": \"#48D1E0\"}],\"systemSeriesColors\": [{\"serieName\": \"e648abe9-833a-48fe-a841-29f85c2fca18\",\"color\": \"#48D1E0\"},{\"serieName\": \"39727204-732f-4704-8678-160ba0894a5c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"},{\"serieName\": \"d399e7cb-b484-48eb-a9c2-dfa467b31433\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: b
+        value: "1"
+    viz_guid: beafdb93-87c6-4b22-a716-059a082fccee
   layout:
     tiles:
     - visualization_id: Viz_1

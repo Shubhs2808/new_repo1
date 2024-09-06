@@ -67,3 +67,9 @@ table:
       fqn: 6c4f76c9-8b43-4f06-ad0e-a59f81d03ff5
     "on": "[F_SALES::PRODUCT_ID] = [D_PRODUCT::PRODUCT_ID]"
     type: RIGHT_OUTER
+  - name: F_SALES_to_OTHERDATE
+    destination:
+      name: OTHERDATE
+      fqn: acefdc55-f4c9-4070-b095-f875783718e7
+    "on": "[F_SALES::DATE_ID] = [OTHERDATE::ID]"
+    type: INNER
