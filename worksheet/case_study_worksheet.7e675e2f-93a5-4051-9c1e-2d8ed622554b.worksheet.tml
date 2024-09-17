@@ -226,6 +226,11 @@ worksheet:
       aggregation: SUM
       index_type: DONT_INDEX
       format_pattern: '#.0%'
+  - name: s_Product Id
+    column_id: F_SALES_1::PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
   properties:
     is_bypass_rls: false
     join_progressive: true

@@ -55,7 +55,7 @@ table:
       join_path:
       - {}
       column:
-      - PRODUCT_NAME
+      - PRODUCT_TYPE
     rules:
     - name: rls
-      expr: "ts_username = [D_PRODUCT_1::PRODUCT_NAME]"
+      expr: "ts_username = [D_PRODUCT_1::PRODUCT_TYPE]"
