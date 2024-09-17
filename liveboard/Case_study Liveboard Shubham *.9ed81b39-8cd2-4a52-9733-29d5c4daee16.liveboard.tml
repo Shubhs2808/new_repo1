@@ -582,8 +582,9 @@ liveboard:
         - Day(Date)
         - Total Sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
-        type: LINE
+        type: KPI
         chart_columns:
         - column_id: Day(Date)
         - column_id: Total Sales
@@ -593,6 +594,7 @@ liveboard:
           "y":
           - Total Sales
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"260e9e37-71a9-46ae-89a9-af6a357bb9a3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"14bf70bf-d412-48bf-acfe-8a964d73f3b3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8d2e1c64-e165-4cc2-801d-9685eddd880a
   layout:
