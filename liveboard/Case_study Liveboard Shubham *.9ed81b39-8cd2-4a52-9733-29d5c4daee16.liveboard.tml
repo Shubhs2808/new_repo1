@@ -561,42 +561,6 @@ liveboard:
       - key: b
         value: "1"
     viz_guid: beafdb93-87c6-4b22-a716-059a082fccee
-  - id: Viz_11
-    answer:
-      name: Total Sales by Daily Date
-      tables:
-      - id: case_study_worksheet
-        name: case_study_worksheet
-        fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
-      search_query: "[Sales] [Date].daily"
-      answer_columns:
-      - name: Day(Date)
-      - name: Total Sales
-      table:
-        table_columns:
-        - column_id: Day(Date)
-          show_headline: false
-        - column_id: Total Sales
-          show_headline: false
-        ordered_column_ids:
-        - Day(Date)
-        - Total Sales
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Day(Date)
-        - column_id: Total Sales
-        axis_configs:
-        - x:
-          - Day(Date)
-          "y":
-          - Total Sales
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"260e9e37-71a9-46ae-89a9-af6a357bb9a3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"14bf70bf-d412-48bf-acfe-8a964d73f3b3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 8d2e1c64-e165-4cc2-801d-9685eddd880a
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -647,11 +611,6 @@ liveboard:
     - visualization_id: Viz_10
       x: 6
       "y": 39
-      height: 8
-      width: 6
-    - visualization_id: Viz_11
-      x: 6
-      "y": 47
       height: 8
       width: 6
   parameter_overrides:
