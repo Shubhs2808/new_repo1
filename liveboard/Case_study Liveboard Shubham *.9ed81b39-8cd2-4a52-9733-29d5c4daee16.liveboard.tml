@@ -561,6 +561,15 @@ liveboard:
       - key: b
         value: "1"
     viz_guid: beafdb93-87c6-4b22-a716-059a082fccee
+  filters:
+  - column:
+    - Product Name
+    oper: in
+    values:
+    - cheese
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1

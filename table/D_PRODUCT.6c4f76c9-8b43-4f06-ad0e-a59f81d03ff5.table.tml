@@ -45,3 +45,17 @@ table:
       index_type: DONT_INDEX
     db_column_properties:
       data_type: DOUBLE
+  rls_rules:
+    tables:
+    - name: D_PRODUCT
+      fqn: 6c4f76c9-8b43-4f06-ad0e-a59f81d03ff5
+    table_paths:
+    - id: D_PRODUCT_1
+      table: D_PRODUCT
+      join_path:
+      - {}
+      column:
+      - PRODUCT_NAME
+    rules:
+    - name: rls
+      expr: "ts_username = [D_PRODUCT_1::PRODUCT_NAME]"
