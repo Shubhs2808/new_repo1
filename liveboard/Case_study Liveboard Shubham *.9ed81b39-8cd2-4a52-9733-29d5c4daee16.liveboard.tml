@@ -416,9 +416,6 @@ liveboard:
           include_min: true
           include_max: true
         description: ""
-      parameter_values:
-      - key: a
-        value: "2"
     viz_guid: 723bb0d7-a244-40c3-9b35-21ea6a5bf941
   - id: Viz_8
     answer:
@@ -490,6 +487,7 @@ liveboard:
         - Total Unit Cost Usd
         - Total Sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"product_type\",\"columnProperty\": {}},{\"columnId\": \"Total Unit Cost Usd\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
@@ -503,6 +501,7 @@ liveboard:
           - Total Unit Cost Usd
           - Total Sales
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"product_type\",\"columnProperty\": {}},{\"columnId\": \"Total Unit Cost Usd\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a31d972-7145-4998-b18d-a566b80da4e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Unit Cost Usd\"],\"isOpposite\": false}},{\"id\": \"48bd8417-01b6-4a81-a589-e5b61f6b6e7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"284d6443-c75f-4286-bcf0-bee6e047bb21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product_type\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: c54d8438-642e-4dfc-89eb-fab526dcb72c
   - id: Viz_10
@@ -626,3 +625,17 @@ liveboard:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
       name: case_study_worksheet::b
+  views:
+  - view_guid: 67d1e7ce-4318-4b07-a134-1c51fccb3319
+    name: as
+    view_filters:
+    - column:
+      - Product Name
+      oper: in
+      values:
+      - cheese
+      - ham
+    is_public: true
+    view_parameters:
+    - name: case_study_worksheet::b
+      id: 028dc081-a901-46ee-bebd-4ad5cbc92909

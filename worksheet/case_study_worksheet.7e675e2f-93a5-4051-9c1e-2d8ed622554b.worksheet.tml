@@ -61,12 +61,8 @@ worksheet:
       - F_SALES_to_D_PRODUCTS
   - id: F_INVENTORY_1
     table: F_INVENTORY
-    join_path:
-    - {}
   - id: F_SALES_1
     table: F_SALES
-    join_path:
-    - {}
   formulas:
   - name: dayofweek
     expr: "day_of_week ( [D_DATE_1::DATE] )"
@@ -100,7 +96,7 @@ worksheet:
       column_type: ATTRIBUTE
       synonym_type: USER_DEFINED
       custom_order:
-      - cookies
+      - cookis
       - soap
       - cheese
       - plates
@@ -232,7 +228,7 @@ worksheet:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
   properties:
-    is_bypass_rls: false
+    is_bypass_rls: true
     join_progressive: true
   parameters:
   - id: 028dc081-a901-46ee-bebd-4ad5cbc92909
