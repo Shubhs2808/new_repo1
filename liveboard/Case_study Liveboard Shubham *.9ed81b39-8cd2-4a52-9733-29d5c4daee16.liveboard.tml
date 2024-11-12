@@ -629,17 +629,3 @@ liveboard:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
       name: case_study_worksheet::b
-  views:
-  - view_guid: 67d1e7ce-4318-4b07-a134-1c51fccb3319
-    name: as
-    view_filters:
-    - column:
-      - Product Name
-      oper: in
-      values:
-      - cheese
-      - ham
-    is_public: true
-    view_parameters:
-    - name: case_study_worksheet::b
-      id: 028dc081-a901-46ee-bebd-4ad5cbc92909
