@@ -571,7 +571,9 @@ liveboard:
     display_name: ""
   layout:
     tabs:
-    - name: <img src="https://w7.pngwing.com/pngs/866/721/png-transparent-magnifying-glass-market-analysis-market-research-company-analytic-text-service-logo.png"> Category Market Overview
+    - name: |-
+        <img style="width: 40px; height: 30px;" alt="Category Market Overview" src="https://w7.pngwing.com/pngs/866/721/png-transparent-magnifying-glass-market-analysis-market-research-company-analytic-text-service-logo.png">
+         Category Market Overview
       description: ""
       tiles:
       - visualization_id: Viz_1
