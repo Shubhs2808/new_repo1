@@ -570,57 +570,61 @@ liveboard:
     is_single_value: false
     display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 0
-      height: 7
-      width: 6
-    - visualization_id: Viz_3
-      x: 0
-      "y": 7
-      height: 8
-      width: 6
-    - visualization_id: Viz_9
-      x: 0
-      "y": 39
-      height: 8
-      width: 6
-    - visualization_id: Viz_8
-      x: 0
-      "y": 31
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 0
-      "y": 23
-      height: 8
-      width: 12
-    - visualization_id: Viz_5
-      x: 5
-      "y": 15
-      height: 7
-      width: 7
-    - visualization_id: Viz_2
-      x: 6
-      "y": 0
-      height: 4
-      width: 6
-    - visualization_id: Viz_6
-      x: 0
-      "y": 19
-      height: 4
-      width: 5
-    - visualization_id: Viz_4
-      x: 0
-      "y": 15
-      height: 4
-      width: 5
-    - visualization_id: Viz_10
-      x: 6
-      "y": 39
-      height: 8
-      width: 6
+    tabs:
+    - name: <img src="https://w7.pngwing.com/pngs/866/721/png-transparent-magnifying-glass-market-analysis-market-research-company-analytic-text-service-logo.png"> Category Market Overview
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 7
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 7
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 15
+        height: 4
+        width: 5
+      - visualization_id: Viz_5
+        x: 5
+        "y": 15
+        height: 7
+        width: 7
+      - visualization_id: Viz_6
+        x: 0
+        "y": 19
+        height: 4
+        width: 5
+      - visualization_id: Viz_7
+        x: 0
+        "y": 23
+        height: 8
+        width: 12
+      - visualization_id: Viz_8
+        x: 0
+        "y": 31
+        height: 8
+        width: 12
+      - visualization_id: Viz_9
+        x: 0
+        "y": 39
+        height: 8
+        width: 6
+      - visualization_id: Viz_10
+        x: 6
+        "y": 39
+        height: 8
+        width: 6
+      id: 828dd385-1db6-422d-a38a-5eaffcb64c95
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:

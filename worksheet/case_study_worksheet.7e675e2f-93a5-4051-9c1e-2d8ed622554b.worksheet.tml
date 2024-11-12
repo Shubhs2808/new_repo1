@@ -190,6 +190,7 @@ worksheet:
       synonyms:
       - Revenue
       - Income
+      format_pattern: "+#,##0"
       synonym_type: AUTO_GENERATED
   - name: inventory
     formula_id: inventory
