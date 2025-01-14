@@ -666,6 +666,10 @@ liveboard:
         height: 8
         width: 6
       - visualization_id: Viz_11
+        x: 0
+        "y": 47
+        height: 10
+        width: 6
       id: 828dd385-1db6-422d-a38a-5eaffcb64c95
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
