@@ -560,9 +560,48 @@ liveboard:
       - key: b
         value: "1"
     viz_guid: beafdb93-87c6-4b22-a716-059a082fccee
+  - id: Viz_11
+    answer:
+      name: Total Settlementamount by Sinnumber
+      tables:
+      - id: email test
+        name: email test
+        fqn: 196b4cda-3a5c-4643-8b7f-f7f8884606b1
+      search_query: "[Sinnumber] [Settlementamount] [Settlementamount] [Sinnumber] [Consultantemail]"
+      answer_columns:
+      - name: Consultantemail
+      - name: Sinnumber
+      - name: Total Settlementamount
+      table:
+        table_columns:
+        - column_id: Consultantemail
+          show_headline: false
+        - column_id: Sinnumber
+          show_headline: false
+        - column_id: Total Settlementamount
+          show_headline: false
+        ordered_column_ids:
+        - Sinnumber
+        - Consultantemail
+        - Total Settlementamount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Consultantemail
+        - column_id: Sinnumber
+        - column_id: Total Settlementamount
+        axis_configs:
+        - x:
+          - Consultantemail
+          "y":
+          - Total Settlementamount
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: f36911bb-b491-45ff-a59c-870c49f3d70d
   filters:
   - column:
-    - Product Name
+    - case_study_worksheet::Product Name
     oper: in
     values:
     - cheese
@@ -626,8 +665,14 @@ liveboard:
         "y": 39
         height: 8
         width: 6
+      - visualization_id: Viz_11
       id: 828dd385-1db6-422d-a38a-5eaffcb64c95
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
       name: case_study_worksheet::b
+  ordered_chips:
+  - name: case_study_worksheet::Product Name
+    type: FILTER
+  - name: case_study_worksheet::b
+    type: PARAMETER

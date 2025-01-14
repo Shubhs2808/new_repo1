@@ -45,3 +45,6 @@ table:
       fqn: 557eb162-cbc8-43f3-902f-239270def89e
     "on": "[F_INVENTORY::DATE_ID] = [D_DATE::DATE_ID]"
     type: RIGHT_OUTER
+  properties:
+    sage_config:
+      is_sage_enabled: false

@@ -50,3 +50,6 @@ table:
       fqn: acefdc55-f4c9-4070-b095-f875783718e7
     "on": "[F_SALES::DATE_ID] = [OTHERDATE::ID]"
     type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: false

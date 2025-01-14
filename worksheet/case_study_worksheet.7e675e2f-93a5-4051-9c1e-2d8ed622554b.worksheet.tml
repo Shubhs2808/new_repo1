@@ -91,7 +91,7 @@ worksheet:
       synonym_type: AUTO_GENERATED
   - name: Product Name
     description: abc
-    column_id: D_PRODUCT_1::PRODUCT_NAME
+    column_id: D_PRODUCT_1::Product
     properties:
       column_type: ATTRIBUTE
       synonym_type: USER_DEFINED
@@ -231,6 +231,8 @@ worksheet:
   properties:
     is_bypass_rls: true
     join_progressive: true
+    sage_config:
+      is_sage_enabled: true
   parameters:
   - id: 028dc081-a901-46ee-bebd-4ad5cbc92909
     name: b
