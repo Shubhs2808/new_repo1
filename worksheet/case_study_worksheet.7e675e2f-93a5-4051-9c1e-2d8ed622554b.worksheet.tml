@@ -61,12 +61,8 @@ worksheet:
       - F_SALES_to_D_PRODUCTS
   - id: F_INVENTORY_1
     table: F_INVENTORY
-    join_path:
-    - {}
   - id: F_SALES_1
     table: F_SALES
-    join_path:
-    - {}
   formulas:
   - name: dayofweek
     expr: "day_of_week ( [D_DATE_1::DATE] )"
@@ -77,8 +73,8 @@ worksheet:
   - name: inventory
     expr: "[D_PRODUCT_2::UNIT_COST_USD] * [F_INVENTORY_1::QUANTITY_PURCHASED]"
     was_auto_generated: false
-  - name: perc
-    expr: "sum ( [Sales] ) / group_aggregate ( sum ( [Sales] ) , query_groups ( ) - { [D_PRODUCT_3::PRODUCT_TYPE] } , query_filters ( ) )"
+  - name: percen
+    expr: "sum ( [Sales] ) / group_aggregate ( sum ( [Sales] ) , { } , { } )"
     was_auto_generated: false
   - name: Sales
     expr: "[D_PRODUCT_3::UNIT_RETAIL_PRICE_USD] * [F_SALES_1::QUANTITY_SOLD]"
@@ -94,12 +90,13 @@ worksheet:
       - Product Number
       synonym_type: AUTO_GENERATED
   - name: Product Name
-    column_id: D_PRODUCT_1::PRODUCT_NAME
+    description: abc
+    column_id: D_PRODUCT_1::Product
     properties:
       column_type: ATTRIBUTE
       synonym_type: USER_DEFINED
       custom_order:
-      - cookies
+      - cookis
       - soap
       - cheese
       - plates
@@ -193,6 +190,7 @@ worksheet:
       synonyms:
       - Revenue
       - Income
+      format_pattern: "+#,##0"
       synonym_type: AUTO_GENERATED
   - name: inventory
     formula_id: inventory
@@ -218,9 +216,23 @@ worksheet:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+  - name: percen
+    formula_id: percen
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#.0%'
+  - name: s_Product Id
+    column_id: F_SALES_1::PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
   properties:
-    is_bypass_rls: false
+    is_bypass_rls: true
     join_progressive: true
+    sage_config:
+      is_sage_enabled: true
   parameters:
   - id: 028dc081-a901-46ee-bebd-4ad5cbc92909
     name: b

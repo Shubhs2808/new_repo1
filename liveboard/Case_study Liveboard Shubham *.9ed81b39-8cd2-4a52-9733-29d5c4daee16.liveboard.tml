@@ -18,7 +18,7 @@ liveboard:
         name: Inventory
         expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
         was_auto_generated: false
-      search_query: "[Product Name] [sales] [product_type].non-food"
+      search_query: "[Product Name] [sales]"
       answer_columns:
       - name: Product Name
       - name: Total sales
@@ -416,9 +416,6 @@ liveboard:
           include_min: true
           include_max: true
         description: ""
-      parameter_values:
-      - key: a
-        value: "2"
     viz_guid: 723bb0d7-a244-40c3-9b35-21ea6a5bf941
   - id: Viz_8
     answer:
@@ -490,6 +487,7 @@ liveboard:
         - Total Unit Cost Usd
         - Total Sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"product_type\",\"columnProperty\": {}},{\"columnId\": \"Total Unit Cost Usd\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
@@ -503,56 +501,182 @@ liveboard:
           - Total Unit Cost Usd
           - Total Sales
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"product_type\",\"columnProperty\": {}},{\"columnId\": \"Total Unit Cost Usd\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a31d972-7145-4998-b18d-a566b80da4e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Unit Cost Usd\"],\"isOpposite\": false}},{\"id\": \"48bd8417-01b6-4a81-a589-e5b61f6b6e7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"284d6443-c75f-4286-bcf0-bee6e047bb21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product_type\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: c54d8438-642e-4dfc-89eb-fab526dcb72c
+  - id: Viz_10
+    answer:
+      name: Total sales and Total Inventory by Product
+      tables:
+      - id: case_study_worksheet
+        name: case_study_worksheet
+        fqn: 7e675e2f-93a5-4051-9c1e-2d8ed622554b
+      formulas:
+      - id: sales
+        name: sales
+        expr: "[Quantity Sold] * [Unit Retail Price Usd]"
+        was_auto_generated: false
+      - id: Inventory
+        name: Inventory
+        expr: "if ( [Quantity Purchased] != null ) then [Quantity Purchased] * [Unit Cost Usd] else null"
+        was_auto_generated: false
+      search_query: "[Product Name] [sales] [Is Holiday] = 1"
+      answer_columns:
+      - name: Product Name
+      - name: Total sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: USD
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Name
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        ordered_column_ids:
+        - Product Name
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Product Name\"]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"938f2f1c-889c-440e-ac6f-c002be5ef37f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"fef59593-d8a8-4c3f-86e0-ccfa737181d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"seriesColors\": [{\"serieName\": \"e648abe9-833a-48fe-a841-29f85c2fca18\",\"color\": \"#48D1E0\"},{\"serieName\": \"39727204-732f-4704-8678-160ba0894a5c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"},{\"serieName\": \"d399e7cb-b484-48eb-a9c2-dfa467b31433\",\"color\": \"#48D1E0\"}],\"systemSeriesColors\": [{\"serieName\": \"e648abe9-833a-48fe-a841-29f85c2fca18\",\"color\": \"#48D1E0\"},{\"serieName\": \"39727204-732f-4704-8678-160ba0894a5c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"},{\"serieName\": \"d399e7cb-b484-48eb-a9c2-dfa467b31433\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: b
+        value: "1"
+    viz_guid: beafdb93-87c6-4b22-a716-059a082fccee
+  - id: Viz_11
+    answer:
+      name: Total Settlementamount by Sinnumber
+      tables:
+      - id: email test
+        name: email test
+        fqn: 196b4cda-3a5c-4643-8b7f-f7f8884606b1
+      search_query: "[Sinnumber] [Settlementamount] [Settlementamount] [Sinnumber] [Consultantemail]"
+      answer_columns:
+      - name: Consultantemail
+      - name: Sinnumber
+      - name: Total Settlementamount
+      table:
+        table_columns:
+        - column_id: Consultantemail
+          show_headline: false
+        - column_id: Sinnumber
+          show_headline: false
+        - column_id: Total Settlementamount
+          show_headline: false
+        ordered_column_ids:
+        - Sinnumber
+        - Consultantemail
+        - Total Settlementamount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Consultantemail
+        - column_id: Sinnumber
+        - column_id: Total Settlementamount
+        axis_configs:
+        - x:
+          - Consultantemail
+          "y":
+          - Total Settlementamount
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: f36911bb-b491-45ff-a59c-870c49f3d70d
+  filters:
+  - column:
+    - case_study_worksheet::Product Name
+    oper: in
+    values:
+    - cheese
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 2
-      height: 7
-      width: 6
-    - visualization_id: Viz_9
-      x: 0
-      "y": 41
-      height: 8
-      width: 6
-    - visualization_id: Viz_3
-      x: 0
-      "y": 9
-      height: 8
-      width: 6
-    - visualization_id: Viz_8
-      x: 0
-      "y": 33
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 0
-      "y": 25
-      height: 8
-      width: 12
-    - visualization_id: Viz_5
-      x: 5
-      "y": 17
-      height: 7
-      width: 7
-    - visualization_id: Viz_6
-      x: 0
-      "y": 21
-      height: 4
-      width: 5
-    - visualization_id: Viz_2
-      x: 6
-      "y": 0
-      height: 4
-      width: 6
-    - visualization_id: Viz_4
-      x: 0
-      "y": 17
-      height: 4
-      width: 5
+    tabs:
+    - name: |-
+        <img style="width: 40px; height: 30px;" alt="Category Market Overview" src="https://w7.pngwing.com/pngs/866/721/png-transparent-magnifying-glass-market-analysis-market-research-company-analytic-text-service-logo.png">
+         Category Market Overview
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 7
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 7
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 15
+        height: 4
+        width: 5
+      - visualization_id: Viz_5
+        x: 5
+        "y": 15
+        height: 7
+        width: 7
+      - visualization_id: Viz_6
+        x: 0
+        "y": 19
+        height: 4
+        width: 5
+      - visualization_id: Viz_7
+        x: 0
+        "y": 23
+        height: 8
+        width: 12
+      - visualization_id: Viz_8
+        x: 0
+        "y": 31
+        height: 8
+        width: 12
+      - visualization_id: Viz_9
+        x: 0
+        "y": 39
+        height: 8
+        width: 6
+      - visualization_id: Viz_10
+        x: 6
+        "y": 39
+        height: 8
+        width: 6
+      - visualization_id: Viz_11
+        x: 0
+        "y": 47
+        height: 10
+        width: 6
+      id: 828dd385-1db6-422d-a38a-5eaffcb64c95
   parameter_overrides:
   - key: 028dc081-a901-46ee-bebd-4ad5cbc92909
     value:
       name: case_study_worksheet::b
+  ordered_chips:
+  - name: case_study_worksheet::Product Name
+    type: FILTER
+  - name: case_study_worksheet::b
+    type: PARAMETER
