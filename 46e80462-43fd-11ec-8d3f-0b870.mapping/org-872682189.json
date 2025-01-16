@@ -18,7 +18,7 @@
   "mappedGuid" : "82b601f3-2c1d-416a-9db0-a7f9687c67b7",
   "counter" : 0,
   "additionalMapping" : {
-    "schema: SA_CASESTUDY" : "schema: PUBLIC" 
+    "schema: PUBLIC" : "schema: SA_CASESTUDY" 
 }, {
   "originalGuid" : "71e79d23-a399-4f29-8b7b-dd903f5fa08c",
   "mappedGuid" : "db35aea5-9dcf-4afc-a29e-0d33381894b4",
