@@ -11,8 +11,7 @@ table:
   - name: ID
     db_column_name: ID
     properties:
-      column_type: MEASURE
-      aggregation: SUM
+      column_type: ATTRIBUTE
       index_type: DONT_INDEX
     db_column_properties:
       data_type: INT64

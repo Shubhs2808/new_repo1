@@ -1,6 +1,7 @@
 guid: 9ed81b39-8cd2-4a52-9733-29d5c4daee16
 liveboard:
   name: Case_study Liveboard Shubham 😀
+  description: Desciption of the livebaord
   visualizations:
   - id: Viz_1
     answer:
