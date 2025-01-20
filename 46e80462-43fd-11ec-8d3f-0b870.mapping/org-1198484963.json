@@ -1,0 +1,53 @@
+[ {
+  "originalGuid" : "9ed81b39-8cd2-4a52-9733-29d5c4daee16",
+  "mappedGuid" : "bc18a584-70be-4b5f-9bd3-b58bfee4950c",
+  "counter" : 0,
+  "additionalMapping" : {
+    "774ee052-6a42-4ec9-9381-36531a893d5f" : "ac6dddf8-5183-4d86-82ff-eb825cef0e0f",
+    "73ac4718-1441-4657-9d2a-0b3ae8ed6874" : "21ac6ab1-973f-43ce-8ae4-cca2b36e7878",
+    "c54d8438-642e-4dfc-89eb-fab526dcb72c" : "1d75c076-2f98-4301-aa41-77c7ea180565",
+    "37dab3bf-9259-46af-841a-22db596726ed" : "12dd9573-4aa3-4407-9f96-4326c4773d37",
+    "723bb0d7-a244-40c3-9b35-21ea6a5bf941" : "c6175f9e-e14f-4870-979d-4d286c68aaf2",
+    "beafdb93-87c6-4b22-a716-059a082fccee" : "a04985f4-8cd5-4a4b-a053-c308f50f95cd",
+    "406e84a3-790a-4db6-9689-9ebe5428122e" : "1a5d4afc-bfc4-4956-9e04-4b78262103bb",
+    "0f2b0ace-0407-481a-a15a-cfc2faf3d6ad" : "11c4ec40-46d4-4c16-8312-205a43a2af22",
+    "e8ce1a7d-c485-4a5e-a93f-4dbbc137f80a" : "8b2c6cad-a71b-4d23-b993-e4a20352c2af",
+    "252dec0d-6e78-4e82-afe8-64254b01a223" : "a725d00d-0e23-4c8a-bea5-efe1f4513a79",
+    "f36911bb-b491-45ff-a59c-870c49f3d70d" : "3e4da75e-37bb-41f2-9406-9fdafaad4c62"
+  }
+}, {
+  "originalGuid" : "557eb162-cbc8-43f3-902f-239270def89e",
+  "mappedGuid" : "c7ec65ef-5ce5-4d9c-8188-8d696814cce7",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "6c4f76c9-8b43-4f06-ad0e-a59f81d03ff5",
+  "mappedGuid" : "231cebae-812e-4445-9d7c-0d1bf59cd282",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "77481211-7927-43c7-8d32-ab5c5ab6dced",
+  "mappedGuid" : "ce414797-05c5-455a-a838-d51f659a075b",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "7e675e2f-93a5-4051-9c1e-2d8ed622554b",
+  "mappedGuid" : "b6e47a0f-9bff-48f5-9b0c-1144fdfb50eb",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "71e79d23-a399-4f29-8b7b-dd903f5fa08c",
+  "mappedGuid" : "dbb94afd-e484-4cdc-ab69-3d1a74c9629b",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "d21f0f30-4c10-469f-83ae-4227de930f7b",
+  "mappedGuid" : "7850fd6c-f245-4434-b36c-0b47463dd2e7",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "196b4cda-3a5c-4643-8b7f-f7f8884606b1",
+  "mappedGuid" : "3dfd755c-9fcd-41dc-8a2c-3c0859fa7a3f",
+  "counter" : 0,
+  "additionalMapping" : { }
+} ]
