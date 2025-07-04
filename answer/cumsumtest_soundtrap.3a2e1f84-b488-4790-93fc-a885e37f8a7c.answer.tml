@@ -1,0 +1,56 @@
+guid: 3a2e1f84-b488-4790-93fc-a885e37f8a7c
+answer:
+  name: cumsumtest_soundtrap
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  formulas:
+  - id: check
+    name: check
+    expr: "cumulative_sum ( [sales] , month ( [date] ) , [year]  )"
+    was_auto_generated: false
+  - id: year
+    name: year
+    expr: "year_name ( [date] )"
+    was_auto_generated: false
+  search_query: "[check] [date].'month of year' [date].yearly [year]"
+  answer_columns:
+  - name: MONTH_OF_YEAR(date)
+  - name: Year(date)
+  - name: check
+  - name: year
+  table:
+    table_columns:
+    - column_id: MONTH_OF_YEAR(date)
+      show_headline: false
+    - column_id: Year(date)
+      show_headline: false
+    - column_id: check
+      show_headline: false
+    - column_id: year
+      show_headline: false
+    ordered_column_ids:
+    - MONTH_OF_YEAR(date)
+    - Year(date)
+    - year
+    - check
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"check\",\"columnProperty\": {}}]}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: MONTH_OF_YEAR(date)
+    - column_id: Year(date)
+    - column_id: check
+    - column_id: year
+    axis_configs:
+    - x:
+      - MONTH_OF_YEAR(date)
+      "y":
+      - check
+      color:
+      - Year(date)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"check\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"year\",\"columnProperty\": {}},{\"columnId\": \"MONTH_OF_YEAR(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"22496690-f0bb-49e7-b57b-f1f4fb05fc7e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"check\"],\"isOpposite\": false}},{\"id\": \"39bfb253-e467-4aaf-b40f-81932ce8e2d1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"MONTH_OF_YEAR(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"check\",\"color\": \"#2E75F0\"},{\"serieName\": \"2022\",\"color\": \"#2E75F0\"},{\"serieName\": \"2023\",\"color\": \"#48D1E0\"},{\"serieName\": \"2024\",\"color\": \"#FCC838\"},{\"serieName\": \"2025\",\"color\": \"#06BF7F\"}]}"
+  display_mode: CHART_MODE
